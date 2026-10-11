@@ -1,0 +1,17 @@
+SET LIVE V2 — SAMSUNG S24 / GOOGLE CHROME
+
+Cette archive contient le fichier HTML d'origine avec les 24 chansons, le test du microphone, les icônes, le manifeste et le service worker pour le mode hors ligne.
+
+IMPORTANT : ouvrir index.html depuis Fichiers (content://) ne donne généralement pas accès au microphone. Il faut d'abord héberger ces fichiers ensemble sur un site HTTPS. Le ZIP seul n'active pas le micro.
+
+Mise en ligne possible : GitHub Pages (site statique gratuit).
+1. Créer un dépôt GitHub public, par exemple set-live.
+2. Dans le dépôt, utiliser Add file > Upload files et envoyer les CINQ fichiers à la racine (index.html, manifest.webmanifest, service-worker.js, icon-192.png, icon-512.png). Ne pas envoyer seulement le ZIP.
+3. Settings > Pages > Build and deployment > Deploy from a branch, branche main et dossier / (root). Enregistrer.
+4. Ouvrir l'adresse HTTPS affichée dans Pages sur le S24.
+5. Dans Chrome, toucher Activer le micro et accepter l'autorisation.
+6. Menu Chrome > Ajouter à l'écran d'accueil > Installer (si proposé). Visiter une fois l'application en ligne pour mettre les fichiers en cache; tester ensuite en mode avion.
+
+ATTENTION : un dépôt GitHub public rend les paroles visibles sur Internet. Ne pas utiliser cette méthode si vous souhaitez garder votre répertoire privé. Dans ce cas, demander une méthode d'hébergement privé ou un emballage Android natif.
+
+Le vumètre mesure seulement le volume; il ne reconnaît pas encore les paroles chantées. Les 24 chansons et leur ordre restent inchangés.
