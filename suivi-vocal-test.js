@@ -22,7 +22,7 @@
   function start() {alert('Le bouton fonctionne !');
     if (!SR) { status.textContent = 'Reconnaissance vocale indisponible.'; return; }
     const current = song();
-    if (!current || !/stand by me/i.test(current.textContent.slice(0,250))) {
+    if (!current) {
       status.textContent = 'Choisis Stand By Me pour le test.';
       return;
     }
