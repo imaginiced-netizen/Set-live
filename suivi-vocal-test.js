@@ -19,7 +19,7 @@
     recognition = null;
     button.textContent = 'Suivi vocal (test)';
   }
-  function start() {alert('Le bouton fonctionne !');
+  function start() {
     if (!SR) { status.textContent = 'Reconnaissance vocale indisponible.'; return; }
     const current = song();
     if (!current) {
