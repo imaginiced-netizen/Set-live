@@ -51,7 +51,7 @@
         }
         if (best >= 0 && score >= 0.45) {
           position = best;
-          lines[best].el.scrollIntoView({behavior:'smooth',block:'center'});
+          lines[best].el.scrollIntoView({behavior:'smooth',block:'start'});
           status.textContent = 'Ligne reconnue : ' + (best + 1) + '/' + lines.length;
           if (result.isFinal && position < lines.length - 1) position++;
         } else {
