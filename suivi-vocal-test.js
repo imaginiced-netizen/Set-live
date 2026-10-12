@@ -53,7 +53,7 @@
           position = best;
           lines[best].el.scrollIntoView({behavior:'smooth',block:'start'});
           status.textContent = 'Ligne reconnue : ' + (best + 1) + '/' + lines.length;
-          if (result.isFinal && position < lines.length - 1) position++;
+          // V2 : pas d'avance automatique après une reconnaissance.
         } else {
           status.textContent = 'Entendu : ' + heard.slice(0,60);
         }
