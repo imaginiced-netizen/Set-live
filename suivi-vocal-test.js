@@ -47,7 +47,7 @@
         for (let i = position; i < Math.min(lines.length, position + 3); i++) {
           const overlap = lines[i].words.filter(w => heardWords.has(w)).length;
           const s = overlap / Math.max(2, Math.min(lines[i].words.length, heardWords.size));
-          if (overlap >= 2 && s > score) { score = s; best = i; }
+          if (overlap >= 2 && s > score + 0.15 * (i - position)) { score = s; best = i; }
         }
         if (best >= 0 && score >= 0.45) {
           position = best;
