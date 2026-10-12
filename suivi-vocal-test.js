@@ -28,7 +28,7 @@
     }
     const stage = current.querySelector('.stage');
     if (!stage) { status.textContent = 'Paroles introuvables.'; return; }
-    lines = [...stage.querySelectorAll('.lyric-line, .sv > div')]
+    lines = [...stage.querySelectorAll('div')]
       .map(el => ({el, words:tokens(el.textContent)}))
       .filter(x => x.words.length >= 2);
     if (!lines.length) { status.textContent = 'Lignes de paroles introuvables.'; return; }
