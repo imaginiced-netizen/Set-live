@@ -44,7 +44,7 @@
         const heard = clean(result[0].transcript);
         const heardWords = new Set(tokens(heard));
         let best = -1, score = 0;
-        for (let i = position; i < Math.min(lines.length, position + 2); i++) {
+        for (let i = position; i < Math.min(lines.length, position + 3); i++) {
           const overlap = lines[i].words.filter(w => heardWords.has(w)).length;
           const s = overlap / Math.max(2, Math.min(lines[i].words.length, heardWords.size));
           if (overlap >= 2 && s > score) { score = s; best = i; }
