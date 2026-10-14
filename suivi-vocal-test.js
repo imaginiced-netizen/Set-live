@@ -63,8 +63,14 @@
         if (e.error === 'not-allowed' || e.error === 'service-not-allowed') stop();
       };
       recognition.onend = () => {
-        if (active) { try { recognition.start(); } catch(e) { stop(); status.textContent = 'Reconnaissance interrompue : ' + e.message; } }
-      };
+  if (active) {
+    active = false;
+    button.textContent = 'Suivi vocal (test)';
+    status.textContent = 'Reconnaissance terminée — redémarrage désactivé pour le test';
+  }
+};
+    
+  
       recognition.start();
       active = true;
       button.textContent = 'Arrêter le suivi vocal';
