@@ -78,7 +78,9 @@
   const panel = document.querySelector('#audioPanel .audio-row') || document.querySelector('#audioPanel');
   if (panel) {
     panel.appendChild(button);
-    (document.querySelector('#audioPanel') || panel).appendChild(status);
+    document.body.appendChild(status);
+status.style.cssText = 'position:fixed;top:8px;left:8px;right:8px;z-index:99999;background:#171717;color:#ffda79;padding:10px;border:1px solid #555;border-radius:8px;font-size:13px;text-align:center;pointer-events:none;';
+status.textContent = 'Suivi vocal prêt';
   }
   document.querySelector('#picker')?.addEventListener('change', stop);
 })();
